@@ -33,15 +33,19 @@ selected_x_var = st.selectbox('What do you want the x variable to be?',
 selected_y_var = st.selectbox('What about the y?',
                               ['bill_depth_mm', 'bill_length_mm', 'flipper_length_mm'])
 
+#Extracting the table
+#df = df[df['species'] == selected_species]
 
-df = df[df['species'] == selected_species]
+#Visualization
 alt_chart = (
     alt.Chart(df, title = f'Scatterplot of {selected_species} penguins')
     .mark_circle()
     .encode(
     x=selected_x_var,
     y=selected_y_var,
+    color = "Species"
     )
+    .interactive()
 
 )
 st.altair_chart(alt_chart)
