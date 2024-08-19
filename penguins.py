@@ -21,6 +21,14 @@ st.write(df.head(10))
 #This is an heading
 st.markdown("**use this Penguins App to make your own Penguins scatterplot** ")
 
-#select box
+#select box for choosing species
 selected_species = st.selectbox("What specie would you like to Visualize? ",
                                 ['Adelie', 'Gentoo', 'Chinstrap'])
+
+#select box for X and  Y axes
+selected_x_var = st.selectbox('What do you want the x variable to be?',
+                              ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g'])
+                              
+
+selected_y_var = st.selectbox('What about the y?',
+                              ['bill_depth_mm', 'bill_length_mm', 'flipper_length_mm', 'body_ mass_g'])
