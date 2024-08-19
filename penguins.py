@@ -13,9 +13,8 @@ import altair as alt
 st.title("Palmer's Penguins")
 
 
-df = pd.read_csv("penguins.csv")
 #Have a glimpse of the dataset
-st.write(df.head(10))
+#st.write(df.head(10))
 
 #This is an heading
 st.markdown("**use this Penguins App to make your own Penguins scatterplot** ")
@@ -36,7 +35,7 @@ selected_y_var = st.selectbox('What about the y?',
 #df = df[df['species'] == selected_species]
 
 #Read the csv file using pandas library
-
+df = pd.read_csv("penguins.csv")
 
 #Visualization
 alt_chart = (
