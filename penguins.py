@@ -17,3 +17,10 @@ df = pd.read_csv("penguins.csv")
 
 #Have a glimpse of the dataset
 st.write(df.head(10))
+
+#This is an heading
+st.markdown("use this Penguins App to make your own Penguins scatterplot ")
+
+#select box
+selected_species = st.selectbox("What specie would you like to Visualize? ",
+                                'Adelie', 'Gentoo', 'Chinstrap')
