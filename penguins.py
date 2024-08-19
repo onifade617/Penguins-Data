@@ -23,4 +23,4 @@ st.markdown("use this Penguins App to make your own Penguins scatterplot ")
 
 #select box
 selected_species = st.selectbox("What specie would you like to Visualize? ",
-                                'Adelie', 'Gentoo', 'Chinstrap')
+                                ['Adelie', 'Gentoo', 'Chinstrap'])
