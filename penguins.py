@@ -36,7 +36,7 @@ selected_y_var = st.selectbox('What about the y?',
 
 df = df[df['species'] == selected_species]
 alt_chart = (
-    alt.Chart(df, title = f'Scatterplot of {selected_species}')
+    alt.Chart(df, title = f'Scatterplot of {selected_species} penguins')
     .mark_circle()
     .encode(
     x=selected_x_var,
