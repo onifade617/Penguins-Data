@@ -32,3 +32,16 @@ selected_x_var = st.selectbox('What do you want the x variable to be?',
 
 selected_y_var = st.selectbox('What about the y?',
                               ['bill_depth_mm', 'bill_length_mm', 'flipper_length_mm', 'body_ mass_g'])
+
+
+df = df[df['species'] == selected_species]
+alt_chart = (
+    alt.Chart(df)
+    .mark_circle()
+    .encode(
+    x=selected_x_var,
+    y=selected_y_var,
+    )
+
+)
+st.altair_chart(alt_chart)
