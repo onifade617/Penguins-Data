@@ -48,4 +48,4 @@ alt_chart = (
     .interactive()
 
 )
-st.altair_chart(alt_chart)
+st.altair_chart(alt_chart, use_container_width=True)
