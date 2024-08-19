@@ -12,9 +12,8 @@ import altair as alt
 
 st.title("Palmer's Penguins")
 
-#Read the csv file using pandas library
-df = pd.read_csv("penguins.csv")
 
+df = pd.read_csv("penguins.csv")
 #Have a glimpse of the dataset
 st.write(df.head(10))
 
@@ -35,6 +34,9 @@ selected_y_var = st.selectbox('What about the y?',
 
 #Extracting the table
 #df = df[df['species'] == selected_species]
+
+#Read the csv file using pandas library
+
 
 #Visualization
 alt_chart = (
