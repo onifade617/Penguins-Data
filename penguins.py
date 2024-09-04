@@ -8,6 +8,7 @@ Created on Mon Aug 19 09:51:05 2024
 import pandas as pd
 import streamlit as st
 import altair as alt
+import seaborn as sns
 
 
 st.title("Palmer's Penguins")
@@ -40,6 +41,9 @@ if penguin_file is not None:
     penguins_df = pd.read_csv(penguin_file)
 else:
     st.stop()
+    
+sns.set_style('darkgrid')
+markers = {"Adelie": "X", "Gentoo": "s", "Chinstrap":'o'}
 
 
 
