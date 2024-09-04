@@ -42,8 +42,7 @@ if penguin_file is not None:
 else:
     st.stop()
     
-sns.set_style('darkgrid')
-markers = {"Adelie": "X", "Gentoo": "s", "Chinstrap":'o'}
+
 
 
 
