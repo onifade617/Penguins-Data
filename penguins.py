@@ -23,6 +23,14 @@ st.markdown("**use this Penguins App to make your own Penguins scatterplot** ")
 #selected_species = st.selectbox("What specie would you like to Visualize? ",
                                 #['Adelie', 'Gentoo', 'Chinstrap'])
 
+penguin_file = st.file_uploader("Select Your Local Penguins CSV (default provided)")
+                                
+if penguin_file is not None:
+    
+    penguins_df = pd.read_csv(penguin_file)
+else:
+    penguins_df = pd.read_csv("penguins.csv")
+
 #select box for X and  Y axes
 selected_x_var = st.selectbox('What do you want the x variable to be?',
                               ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g'])
